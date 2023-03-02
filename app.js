@@ -1,7 +1,7 @@
-const express = require('express');
-const app = express();
+const express = require('express'); // Importamos express para poder usarlo
+const app = express(); // Creamos una instancia de express
 
-app.get('/', (req, res) => {
+app.get('/', (req, res) => { // Creamos una ruta con el método get con codigo en html
     res.send(`<!DOCTYPE html>
     <html lang="en">
     <head>
@@ -16,7 +16,7 @@ app.get('/', (req, res) => {
     </html>`);
 });
 
-app.get('/uno', (req, res) => {
+app.get('/uno', (req, res) => { // Creamos una ruta con el método get con texto plano
     res.send('Hello world, from route one');
 });
 
@@ -24,4 +24,4 @@ app.get('/prueba', (req, res) => {
     res.send('Hello world, from route prueba');
 });
 
-app.listen(3000);
+app.listen(3000); // Le decimos a express que escuche en el puerto 3000
